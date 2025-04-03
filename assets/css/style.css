@@ -1,0 +1,13 @@
+:root {
+  --light-brown: #fff8f1;
+  --brown: #a2672d;
+  --blue: #4aa0cd;
+}
+
+.font-ibm-plex-sans {
+  font-family: "IBM Plex Sans";
+}
+.font-montserrat {
+  font-family: "Montserrat";
+}
+

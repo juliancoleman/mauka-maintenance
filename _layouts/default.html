@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>{{ site.title }}</title>
+
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    </head>
+
+    <body>
+        <header class="z-10 bg-white/50 flex items-center justify-between p-4 top-0 sticky border-b border-b-black backdrop-blur-lg">
+            <a href="{{ '/' | relative_url }}" class="flex items-center gap-4 no-underline">
+                <img
+                    src="/assets/images/mauka-logo.png"
+                    class="max-w-12"
+                />
+                <span class="font-montserrat uppercase hidden sm:block" style="color: var(--brown)">Mauka<br />Maintenance</span>
+            </a>
+
+            <nav class="flex gap-10 font-ibm-plex-sans items-center">
+                <a class="hidden sm:inline no-underline text-black hover:text-[var(--brown)] text-lg transition-colors" href="{{ '/about' | relative_url }}">About</a>
+                <a class="hidden sm:inline no-underline text-black hover:text-[var(--brown)] text-lg transition-colors" href="{{ '/blog' | relative_url }}">Services</a>
+                <a class="rounded-md no-underline text-white inline-block bg-black px-10 py-1 rounded text-lg transition-colors border-2 border-[var(--blue)] hover:border-black hover:bg-white hover:text-black" href="{{ '/contact' | relative_url }}">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer class="grid sm:flex justify-between items-center px-12 py-8 bg-neutral-900 text-white gap-6">
+            <div class="grid gap-4">
+                <div class="flex items-center gap-4">
+                    <img src="/assets/images/mauka-logo.png" alt="Mauka Logo" class="h-12 [filter:invert(1)]" />
+                    <p class="text-sm font-montserrat">&copy; 2025 Mauka Maintenance. All rights reserved.</p>
+                </div>
+
+                <div class="grid gap-1">
+                    <a href="tel:+17204007156">+1 (720) 400-7156</a>
+                    <a href="mailto:maukamaintenance1@gmail.com">maukamaintenance1@gmail.com</a>
+                </div>
+            </div>
+            <div class="flex gap-8 font-ibm-plex-sans">
+                <a href="#" class="hover:text-orange-300 transition-colors">About</a>
+                <a href="#" class="hover:text-orange-300 transition-colors">Services</a>
+                <a href="{{ '/contact' | relative_url }}" class="hover:text-orange-300 transition-colors">Contact</a>
+            </div>
+        </footer>
+    </body>
+</html>
